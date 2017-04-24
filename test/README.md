@@ -23,12 +23,12 @@ To run tests manually, drop into the test container with
 
 and run avocado like this:
 
-    $ avocado run test -m images.yaml
+    $ avocado run test/test.py -m image:test/images.yml role:test/roles.yml
 
 To only run tests against a single image, use avocado's parameter filtering
 mechanism:
 
-    $ avocado run test -m images.yaml --filter-only /run/centos-7
+    $ avocado run test/test.py -m image:test/images.yml role:test/roles.yml --filter-only /run/image/centos-7
 
 To run a single test, replace the `test` by the test program you want to run.
 
